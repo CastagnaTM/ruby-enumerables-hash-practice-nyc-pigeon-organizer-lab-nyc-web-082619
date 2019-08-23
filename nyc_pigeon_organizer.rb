@@ -40,3 +40,4 @@ while bird_index < birds.length do
 	end
 	rearranged
 end
+end
