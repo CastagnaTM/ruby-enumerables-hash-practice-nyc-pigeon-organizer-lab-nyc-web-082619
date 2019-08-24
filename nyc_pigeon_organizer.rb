@@ -15,7 +15,7 @@ def nyc_pigeon_organizer(data)
   gender_keys = data[:gender].keys.to_a
   lives_keys = data[:lives].keys.to_a
 
-  
+
 bird_index = 0
 while bird_index < birds.length do
 	color_index = 0
