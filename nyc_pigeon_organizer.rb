@@ -27,5 +27,5 @@ while bird_index < birds.length do
 	end
 	bird_index += 1
 end
-rearranged
+return rearranged
 end
