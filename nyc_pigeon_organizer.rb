@@ -4,7 +4,7 @@ def nyc_pigeon_organizer(data)
   			value.each do|attribute, names|
   						names.each do |bird_name|
   		 if !rearranged.key?(bird_name)
-  		    rearranged[:"#{bird_name}"] = {color: [], gender: [], lives: []}
+  		    rearranged["#{bird_name}"] = {color: [], gender: [], lives: []}
   		 end
   		end
   	end
@@ -21,21 +21,21 @@ def nyc_pigeon_organizer(data)
   	color_index = 0
   	while color_index < color_keys.length do
   		if data[:color][:"#{color_keys[color_index]}"].include?("#{birds[bird_index]}")
-  			rearranged[:"#{birds[bird_index]}"][:color].push("#{color_keys[color_index]}")
+  			rearranged["#{birds[bird_index]}"][:color].push("#{color_keys[color_index]}")
   		end
   		color_index += 1
   	end
   	gender_index = 0
   	while gender_index < gender_keys.length do
   		if data[:gender][:"#{gender_keys[gender_index]}"].include?("#{birds[bird_index]}")
-  			rearranged[:"#{birds[bird_index]}"][:gender].push( "#{gender_keys[gender_index]}")
+  			rearranged["#{birds[bird_index]}"][:gender].push( "#{gender_keys[gender_index]}")
   		end
   		gender_index += 1
   	end
   	lives_index = 0
   	while lives_index < lives_keys.length do
   			if data[:lives]["#{lives_keys[lives_index]}"].include?("#{birds[bird_index]}")
-  				rearranged[:"#{birds[bird_index]}"][:lives].push( "#{lives_keys[lives_index]}")
+  				rearranged["#{birds[bird_index]}"][:lives].push( "#{lives_keys[lives_index]}")
   		end
   		lives_index += 1
   	end
